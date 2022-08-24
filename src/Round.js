@@ -2,20 +2,20 @@ const Turn = require('../src/Turn');
 
 class Round {
   constructor(deckObj) {
-    this.deck = deckObj; //for some reason can't do deckObj.cards - why??
+    this.deck = deckObj.cards;
     this.turns = 0;
     this.incorrectGuesses = [];
     this.currentCardIndex = 0;
   };
 
   returnCurrentCard() {
-    return this.deck.cards[this.currentCardIndex];
+    return this.deck[this.currentCardIndex];
   };
 
   takeTurn(guess) {
-    let thisTurn = new Turn(guess, this.deck.cards[this.currentCardIndex]);
+    let thisTurn = new Turn(guess, this.deck[this.currentCardIndex]);
     if(!thisTurn.evaluateGuess()) {
-      this.incorrectGuesses.push(this.deck.cards[this.currentCardIndex].id);
+      this.incorrectGuesses.push(this.deck[this.currentCardIndex].id);
     };
     this.currentCardIndex += 1;
     this.turns += 1;
@@ -29,7 +29,7 @@ class Round {
 
   endRound() {
     let score = this.calculatePercentCorrect();
-    return `** Round over! ** You answered ${score}% of the questions correctly!`
+    console.log(`** Round over! ** You answered ${score}% of the questions correctly!`);
   }
 };
 

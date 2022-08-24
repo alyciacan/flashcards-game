@@ -7,12 +7,6 @@ const Turn = require('../src/Turn');
 const Card = require('../src/Card');
 
 describe('Round', function() {
-
-  it('should be a function', function() {
-    const round = new Round;
-    expect(Round).to.be.a('function');
-  });
-
   it('should start out by playing the first card in the Deck', function() {
     const card1 = new Card(1, 'How old is Alycia?', ['31', '30', '36', '35'], '36');
     const card2 = new Card(2, 'In which state was Alycia born?', ['Maine', 'Utah', 'California', 'Rhode Island'], 'Maine');
@@ -116,10 +110,9 @@ describe('Round', function() {
     const response3 = round1.takeTurn('7');
 
     const score = round1.calculatePercentCorrect();
-    const gameOver = round1.endRound();
+    round1.endRound();
 
     expect(score).to.equal(66);
-    expect(gameOver).to.equal('** Round over! ** You answered 66% of the questions correctly!')
   });
 
 });
