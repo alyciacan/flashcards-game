@@ -91,7 +91,7 @@ describe('Round', function() {
 
     expect(round.incorrectGuesses).to.include(1);
   });
-//Feedback is returned regarding whether the guess is incorrect or correct
+
   it('should return feedback whether the guess is incorrect or correct', function() {
     const card1 = new Card(1, 'How old is Alycia?', ['31', '30', '36', '35'], '36');
     const card2 = new Card(2, 'In which state was Alycia born?', ['Maine', 'Utah', 'California', 'Rhode Island'], 'Maine');
@@ -106,13 +106,28 @@ describe('Round', function() {
     const card4 = new Card(1, 'How old is Alycia?', ['31', '30', '36', '35'], '36');
     const card5 = new Card(2, 'In which state was Alycia born?', ['Maine', 'Utah', 'California', 'Rhode Island'], 'Maine');
     const card6 = new Card(3, 'How many tattoos does Alycia have?', ['0', '3', '2', '7'], '3');
-    const deck1 = new Deck([card1, card2, card3]);
-    const round1 = new Round(deck);
+    const deck1 = new Deck([card4, card5, card6]);
+    const round1 = new Round(deck1);
 
     const response1 = round1.takeTurn('36');
 
     expect(response1).to.equal('Correct!');
   });
+//calculatePercentCorrect: method that calculates and returns the percentage of correct guesses
+  it('should calculate and return the percentage of correct guesses', function() {
+    const card4 = new Card(1, 'How old is Alycia?', ['31', '30', '36', '35'], '36');
+    const card5 = new Card(2, 'In which state was Alycia born?', ['Maine', 'Utah', 'California', 'Rhode Island'], 'Maine');
+    const card6 = new Card(3, 'How many tattoos does Alycia have?', ['0', '3', '2', '7'], '3');
+    const deck1 = new Deck([card4, card5, card6]);
+    const round1 = new Round(deck1);
 
+    const response1 = round1.takeTurn('36');
+    const response2 = round1.takeTurn('Maine');
+    const response3 = round1.takeTurn('7');
+
+    const score = round1.calculatePercentCorrect();
+    
+    expect(score).to.equal(66);
+  });
 
 });
