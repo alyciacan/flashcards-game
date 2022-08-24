@@ -113,8 +113,8 @@ describe('Round', function() {
 
     expect(response1).to.equal('Correct!');
   });
-//calculatePercentCorrect: method that calculates and returns the percentage of correct guesses
-  it('should calculate and return the percentage of correct guesses', function() {
+
+  it('should calculate and return the percentage of correct guesses, along with an end game message', function() {
     const card4 = new Card(1, 'How old is Alycia?', ['31', '30', '36', '35'], '36');
     const card5 = new Card(2, 'In which state was Alycia born?', ['Maine', 'Utah', 'California', 'Rhode Island'], 'Maine');
     const card6 = new Card(3, 'How many tattoos does Alycia have?', ['0', '3', '2', '7'], '3');
@@ -126,8 +126,10 @@ describe('Round', function() {
     const response3 = round1.takeTurn('7');
 
     const score = round1.calculatePercentCorrect();
-    
+    const gameOver = round1.endRound();
+
     expect(score).to.equal(66);
+    expect(gameOver).to.equal('** Round over! ** You answered 66% of the questions correctly!')
   });
 
 });

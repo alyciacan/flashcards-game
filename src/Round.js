@@ -25,6 +25,11 @@ class Round {
   calculatePercentCorrect() {
     let correctAnswers = this.turns - this.incorrectGuesses.length;
     return parseInt((correctAnswers / this.turns) * 100);
+  };
+
+  endRound() {
+    let score = this.calculatePercentCorrect();
+    return `** Round over! ** You answered ${score}% of the questions correctly!`
   }
 };
 
