@@ -34,16 +34,6 @@ describe('Round', function() {
     expect(round.incorrectGuesses).to.have.lengthOf(0);
   });
 
-  it.skip('should create a new Turn instance every time a guess is made', function() {
-    const card1 = new Card(1, 'How old is Alycia?', ['31', '30', '36', '35'], '36');
-    const card2 = new Card(2, 'In which state was Alycia born?', ['Maine', 'Utah', 'California', 'Rhode Island'], 'Maine');
-    const card3 = new Card(3, 'How many tattoos does Alycia have?', ['0', '3', '2', '7'], '3');
-    const deck = new Deck([card1, card2, card3]);
-    const round = new Round(deck);
-
-    expect(round.takeTurn('30')).to.be.a('object');
-  });//not sure if I need this test!
-
   it('should update the currentCardIndex each time a turn is taken', function() {
     const card1 = new Card(1, 'How old is Alycia?', ['31', '30', '36', '35'], '36');
     const card2 = new Card(2, 'In which state was Alycia born?', ['Maine', 'Utah', 'California', 'Rhode Island'], 'Maine');
