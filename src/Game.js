@@ -15,10 +15,11 @@ class Game {
     const questionsDatabase = prototypeQuestions.Deck;
     questionsDatabase.forEach((question) => {
       question = new Card(question.id, question.question, question.answers, question.correctAnswer)
-      questions.push(question);
+      questions.push(question); //could use map instead?
     });
     const deck = new Deck(questions);
-    return deck;
+    const round = new Round(deck);
+    return round;
   }
 
   printMessage(deck, round) {

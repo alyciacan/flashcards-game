@@ -32,6 +32,10 @@ describe('Game class', function() {
 
     expect(thing).to.be.a('object');
 
+    //to test (but how?):
+    //does it invoke printMessage and printQuestion?
+    //were the deck and round and cards created?
+
 
 
 
