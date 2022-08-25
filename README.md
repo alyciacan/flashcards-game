@@ -1,71 +1,30 @@
-# FlashCards Starter Kit
+# Flashcards
+An interactive and effective way to study for the game-oriented Mod 2 student!
 
-## Fork This Repo
+## Abstract
+Flashcards is an object-oriented interactive application using ES6 classes and SRP functions.
 
-On the top right corner of this page, click the **Fork** button.
+## See it in Action
+![flashcards example gif](https://media.giphy.com/media/i1MTJRn4lIc4PYDGc5/giphy.gif)
 
-## Setup
+## Technologies used
+* ES6 JavaScript
+* TDD, Chai and Mocha
 
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
+## Learning Objectives ([Project Specs](https://frontend.turing.edu/projects/flash-cards.html))
+* Write modular, reusable code that follows SRP (Single Responsibility Principle)
+* Implement ES6 classes
+* Implement a **robust testing suite** using TDD
+* Contribute code to a partially-constructed object-oriented application
 
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
-
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
-
-```bash
-npm install
-```
-
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
-
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
-
-```bash
-Your project is running...
-```
-
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
+## Install/Setup instructions
+1. Clone the repo to your local
+2. `cd` into the folder
+3. Run `npm install`
+4. Run `node index.js` to start playing
 
 
-## Where to Add Your Code
+## About Me
+I'm a Mod 2 student in the Front-End program at [Turing School of Software and Design](https://frontend.turing.edu/). That means I've been a dev for about 8 weeks! Find me on [LinkedIn](www.linkedin.com/in/alycia-canavan), and check out my work on [GitHub](https://github.com/alyciacan).
 
-### JavaScript
-
-**Create all of your feature code files in the `src` directory.**
-
-We will be using the `module.exports` and `require` syntax to share code across files.
-
-## How to View Your Code in Action
-
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
-
-```bash
-node index.js
-```
-
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
-
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
-
----
-
-## Test Files Organization
-
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
-
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
-
-## Running Your Tests
-
-Run your test suite using the command:
-
-```bash
-npm test
-```
-
-The test results will output to the terminal.
-
-
+## Wins and Challenges
