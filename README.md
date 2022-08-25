@@ -27,6 +27,7 @@ I'm a Mod 2 student in the Front-End program at [Turing School of Software and D
 
 ## Wins 🏆 and Challenges 😠 
 🏆 I pushed myself to complete this project a day ahead of schedule, to make extra time for studying!   
+🏆 Used Trello to manage and organize my work      
 🏆 I had a lot of fun writing classes (I geek out on class-to-class interactions!)      
 🏆 This was my first time diving in test-first!     
 😠 I found writing all my own imports/exports a bit challenging        
