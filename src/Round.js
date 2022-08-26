@@ -7,9 +7,6 @@ class Round {
     this.incorrectGuesses = [];
   };
 
-  test() {
-    console.log(this.deck[this.turns]);
-  }
   returnCurrentCard() {
     return this.deck[this.turns];
   };
