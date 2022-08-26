@@ -9,14 +9,18 @@ const Card = require('../src/Card');
 const prototypeData = require('../src/data');
 
 describe('Game class', function() {
+  let game;
+
+  beforeEach(() => {
+    game = new Game();
+
+  });
   it('should keep track of the current round', function() {
-    const game = new Game();
 
     expect(game.roundMessage).to.equal('This is the first round.');
   });
 
   it('should have a start method', function() {
-    const game = new Game();
 
     expect(game.start).to.be.a('function');
   });
