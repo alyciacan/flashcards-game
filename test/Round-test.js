@@ -34,20 +34,22 @@ describe('Round', function() {
 
   it('should start out by playing the first card in the Deck', function() {
 
+    round.test()
+
     expect(round.returnCurrentCard()).to.equal(card1);
   });
 
   it('should start out with 0 turns and 0 incorrect guesses', function() {
 
     expect(round.turns).to.equal(0);
-    expect(round.incorrectGuesses).to.have.lengthOf(0);
+    expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
-  it('should update the currentCardIndex each time a turn is taken', function() {
+  it('should update the turn each time a turn is taken', function() {
 
     round.takeTurn('30');
 
-    expect(round.currentCardIndex).to.equal(1);
+    expect(round.turns).to.equal(1);
   });
 
   it('should then play the next card in the array on the next turn', function() {
@@ -61,7 +63,7 @@ describe('Round', function() {
 
     round.takeTurn('30');
 
-    expect(round.incorrectGuesses).to.have.lengthOf(1);
+    expect(round.incorrectGuesses).to.deep.equal([1]);
   });
 
   it('should store the id of the incorrectly answered question in incorrectGuesses array', function() {
@@ -89,6 +91,7 @@ describe('Round', function() {
     const response3 = round1.takeTurn('7');
 
     const score = round1.calculatePercentCorrect();
+    
     round1.endRound();
 
     expect(score).to.equal(66);

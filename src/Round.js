@@ -5,19 +5,20 @@ class Round {
     this.deck = deckObj.cards;
     this.turns = 0;
     this.incorrectGuesses = [];
-    this.currentCardIndex = 0;
   };
 
+  test() {
+    console.log(this.deck[this.turns]);
+  }
   returnCurrentCard() {
-    return this.deck[this.currentCardIndex];
+    return this.deck[this.turns];
   };
 
   takeTurn(guess) {
-    let thisTurn = new Turn(guess, this.deck[this.currentCardIndex]);
+    let thisTurn = new Turn(guess, this.deck[this.turns]);
     if(!thisTurn.evaluateGuess()) {
-      this.incorrectGuesses.push(this.deck[this.currentCardIndex].id);
+      this.incorrectGuesses.push(this.deck[this.turns].id);
     };
-    this.currentCardIndex += 1;
     this.turns += 1;
     return thisTurn.giveFeedback();
   };

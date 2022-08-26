@@ -23,6 +23,11 @@ describe('Deck', function() {
     expect(Deck).to.be.a('function');
   });
 
+  it('should be initialized with an array', function() {
+
+    expect(deck.cards).to.deep.equal([card1, card2, card3]);
+  });
+
   it('should know how many Cards are in the deck', function() {
 
     expect(deck.countCards()).to.equal(3);

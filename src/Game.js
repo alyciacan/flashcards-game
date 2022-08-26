@@ -21,7 +21,7 @@ class Game {
     const questionsDatabase = prototypeQuestions.Deck;
     const cards = prototypeQuestions.forEach((question) => {
       question = new Card(question.id, question.question, question.answers, question.correctAnswer)
-      questions.push(question); //could use map instead?
+      questions.push(question);
     });
     const deck = new Deck(questions);
     const round = new Round(deck);
